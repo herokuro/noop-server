@@ -1,0 +1,20 @@
+{
+  "name": "@herokuro/noop-server",
+  "version": "0.0.0",
+  "description": "A really basic Node.js server to use in development and testing, when using Heroku.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/herokuro/noop-server.git"
+  },
+  "keywords": [],
+  "author": "Richard King <richrdkng@gmail.com> (www.richrdkng.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/herokuro/noop-server/issues"
+  },
+  "homepage": "https://github.com/herokuro/noop-server#readme"
+}

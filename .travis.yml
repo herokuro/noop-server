@@ -1,0 +1,47 @@
+language: node_js
+
+node_js:
+  - node
+  # - lts/*
+  # - 10
+  # - 9
+  # - 8
+  # - 7
+
+os:
+  - linux
+  # - osx
+  # - windows
+
+sudo: false
+
+notifications:
+  email: false
+
+cache:
+  npm: true
+
+jobs:
+  include:
+    - stage: test
+      script:
+        - npm run test
+
+      after_success:
+        # submit coverage report
+        # - npx nyc report --reporter=text-lcov | npx coveralls
+
+    - stage: release
+      script:
+        # restructure the package, then list the files that will be released
+        # - rm index.js            # remove files in project root
+        # - rm -rf docs tasks test # remove directories
+        # - mv src/* .             # move code to the project root
+        # - rm -rf src             # remove previous code directory
+        # - npm pack --dry-run     # list the files
+
+      deploy:
+        skip_cleanup: true
+        provider: script
+        script:
+          # - npx semantic-release
