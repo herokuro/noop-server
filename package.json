@@ -2,9 +2,10 @@
   "name": "@herokuro/noop-server",
   "version": "0.0.0",
   "description": "A really basic Node.js server to use in development and testing, when using Heroku.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --config .nodemonrc"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/herokuro/noop-server/issues"
   },
-  "homepage": "https://github.com/herokuro/noop-server#readme"
+  "homepage": "https://github.com/herokuro/noop-server#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.1",
+    "snazzy": "^8.0.0",
+    "standard": "^14.1.0"
+  }
 }

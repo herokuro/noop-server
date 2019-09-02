@@ -1,0 +1,7 @@
+{
+  "verbose": true,
+  "watch": [
+    "lib/"
+  ],
+  "ext": "js"
+}
