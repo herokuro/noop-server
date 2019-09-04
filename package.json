@@ -5,12 +5,14 @@
   "main": "lib/index.js",
   "bin": "./bin/cli.js",
   "scripts": {
-    "test:cli": "tape test/cli.test.js | tap-spec",
-    "test:module": "tape test/module.test.js | tap-spec",
-    "test": "npm run test:cli && npm run test:module",
     "dev:cli": "npm run dev -- bin/cli.js",
     "dev:module": "npm run dev",
-    "dev": "nodemon --config .nodemonrc"
+    "dev": "nodemon --config .nodemonrc",
+    "style:check": "standard --verbose | snazzy",
+    "style:fix": "standard --fix",
+    "test:cli": "tape test/cli.test.js | tap-spec",
+    "test:module": "tape test/module.test.js | tap-spec",
+    "test": "npm run test:cli && npm run test:module"
   },
   "repository": {
     "type": "git",

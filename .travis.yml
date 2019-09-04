@@ -2,16 +2,15 @@ language: node_js
 
 node_js:
   - node
-  # - lts/*
-  # - 10
-  # - 9
-  # - 8
-  # - 7
+  - lts/*
+  - 10
+  - 9
+  - 8
 
 os:
   - linux
-  # - osx
-  # - windows
+  - osx
+  - windows
 
 sudo: false
 
@@ -21,17 +20,30 @@ notifications:
 cache:
   npm: true
 
+stages:
+  - style
+  - test
+  - deploy
+
 jobs:
   include:
-    - stage: test
+    - stage: style
       script:
-        - npm run test
+        - npm run style:check
 
       after_success:
         # submit coverage report
         # - npx nyc report --reporter=text-lcov | npx coveralls
 
-    - stage: release
+    - stage: test
+      script:
+        - npm test
+
+      after_success:
+        # submit coverage report
+        # - npx nyc report --reporter=text-lcov | npx coveralls
+
+    - stage: deploy
       script:
         # restructure the package, then list the files that will be released
         # - rm index.js            # remove files in project root
