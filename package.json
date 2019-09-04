@@ -12,7 +12,10 @@
     "style:fix": "standard --fix",
     "test:cli": "tape test/cli.test.js | tap-spec",
     "test:module": "tape test/module.test.js | tap-spec",
-    "test": "npm run test:cli && npm run test:module"
+    "test": "tape test/**/*.test.js | tap-spec",
+    "coverage:check": "nyc tape test/**/*.test.js | tap-nyc",
+    "coverage:report": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "before-commit": "npm run style:check && npm run test && npm run coverage:check"
   },
   "repository": {
     "type": "git",
@@ -31,8 +34,10 @@
     "jsdom": "^15.1.1",
     "node-fetch": "^2.6.0",
     "nodemon": "^1.19.1",
+    "nyc": "^14.1.1",
     "snazzy": "^8.0.0",
     "standard": "^14.1.0",
+    "tap-nyc": "^1.0.3",
     "tap-spec": "^5.0.0",
     "tape": "^4.11.0"
   }

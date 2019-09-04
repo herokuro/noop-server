@@ -9,16 +9,11 @@ node_js:
 
 os:
   - linux
-  - osx
-  - windows
 
 sudo: false
 
 notifications:
   email: false
-
-cache:
-  npm: true
 
 stages:
   - style
@@ -29,28 +24,22 @@ jobs:
   include:
     - stage: style
       script:
+        # check code style according to StandardJS
         - npm run style:check
-
-      after_success:
-        # submit coverage report
-        # - npx nyc report --reporter=text-lcov | npx coveralls
 
     - stage: test
       script:
-        - npm test
+        # run tests with coverage
+        - npx nyc tape test/**/*.test.js | npx tap-nyc
 
       after_success:
         # submit coverage report
-        # - npx nyc report --reporter=text-lcov | npx coveralls
+        - npx nyc report --reporter=text-lcov > coverage.lcov && npx codecov
 
     - stage: deploy
       script:
-        # restructure the package, then list the files that will be released
-        # - rm index.js            # remove files in project root
-        # - rm -rf docs tasks test # remove directories
-        # - mv src/* .             # move code to the project root
-        # - rm -rf src             # remove previous code directory
-        # - npm pack --dry-run     # list the files
+        # list the files that will be released
+        - npm pack --dry-run
 
       deploy:
         skip_cleanup: true
