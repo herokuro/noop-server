@@ -1,7 +1,3 @@
 {
-  "verbose": true,
-  "watch": [
-    "lib/"
-  ],
-  "ext": "js"
+  "verbose": true
 }

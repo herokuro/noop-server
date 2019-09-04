@@ -3,9 +3,11 @@
   "version": "0.0.0",
   "description": "A really basic Node.js server to use in development and testing, when using Heroku.",
   "main": "lib/index.js",
+  "bin": "./bin/cli.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --config .nodemonrc"
+    "dev:module": "nodemon --config .nodemonrc",
+    "dev:cli": "nodemon --config .nodemonrc bin/cli.js"
   },
   "repository": {
     "type": "git",
