@@ -78,6 +78,6 @@ for (let i = 0, len = args.length; i < len; i += 2) {
   }
 }
 
-const server = require('../lib')
+const Server = require('../lib')
 
-server(port, message)
+new Server(port, message).start()
