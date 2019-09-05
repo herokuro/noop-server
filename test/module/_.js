@@ -1,6 +1,7 @@
 'use strict'
 
 require('./defaults.test')
+require('./errors.test')
 
 require('./serve-html-with-default-message.test')
 require('./serve-html-with-custom-message.test')
