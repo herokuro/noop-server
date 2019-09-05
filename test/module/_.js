@@ -8,3 +8,5 @@ require('./serve-html-with-custom-message.test')
 
 require('./serve-api-with-default-message.test')
 require('./serve-api-with-custom-message.test')
+
+require('./serve-favicon.test')
