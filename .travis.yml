@@ -25,12 +25,12 @@ jobs:
     - stage: style
       script:
         # check code style according to StandardJS
-        - npm run style:check
+        - npm run check:style
 
     - stage: test
       script:
         # run tests with coverage
-        - npx nyc tape test/**/*.test.js | npx tap-nyc
+        - npm run check:coverage
 
       after_success:
         # submit coverage report
