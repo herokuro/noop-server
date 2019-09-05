@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+/* eslint no-fallthrough: "off" */
+
 // process flags and options ---------------------------------------------------
 const pkg = require('../package.json')
 const [,, ...args] = process.argv
@@ -17,7 +19,6 @@ for (let i = 0, len = args.length; i < len; i += 2) {
     case '--version':
       console.log(pkg.version)
       process.exit()
-      break
 
     // process help flag
     case '-h':
@@ -51,7 +52,6 @@ for (let i = 0, len = args.length; i < len; i += 2) {
         `.replace(/^ {8}/gm, '').slice(0, -2) // dedent and end-trim the text
       )
       process.exit()
-      break
 
     // process port option
     case '-p':
