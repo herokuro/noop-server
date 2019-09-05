@@ -67,13 +67,11 @@ for (let i = 0, len = args.length; i < len; i += 2) {
 
     // process port-message pair options
     default:
-      if (typeof flag === 'string') {
-        port = parseInt(flag, 10)
-      }
+      /* istanbul ignore next */
+      if (typeof flag === 'string') port = parseInt(flag, 10)
 
-      if (typeof value === 'string') {
-        message = value
-      }
+      /* istanbul ignore next */
+      if (typeof value === 'string') message = value
       break
   }
 }
