@@ -7,6 +7,9 @@ node_js:
   - 9
   - 8
 
+cache:
+  npm: false
+
 os:
   - linux
 
