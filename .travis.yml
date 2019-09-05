@@ -17,7 +17,7 @@ notifications:
 
 stages:
   - style
-  - test
+  - coverage
   - deploy
 
 jobs:
@@ -27,7 +27,7 @@ jobs:
         # check code style according to StandardJS
         - npm run check:style
 
-    - stage: test
+    - stage: coverage
       script:
         # run tests with coverage
         - npm run check:coverage
