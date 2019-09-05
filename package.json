@@ -1,13 +1,13 @@
 {
   "name": "@herokuro/noop-server",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "description": "A really basic Node.js server to use in development and testing, when using Heroku.",
   "author": "Richard King <richrdkng@gmail.com> (www.richrdkng.com)",
   "license": "ISC",
   "homepage": "https://github.com/herokuro/noop-server#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/herokuro/noop-server.git"
+    "url": "https://github.com/herokuro/noop-server.git"
   },
   "bugs": {
     "url": "https://github.com/herokuro/noop-server/issues"
@@ -40,12 +40,19 @@
     "check": "npm run check:style && npm run check:coverage"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/commit-analyzer": "^6.3.0",
+    "@semantic-release/git": "^7.0.16",
+    "@semantic-release/github": "^5.4.3",
+    "@semantic-release/npm": "^5.1.15",
+    "@semantic-release/release-notes-generator": "^7.3.0",
     "execa": "^2.0.4",
     "get-port": "^5.0.0",
     "jsdom": "^15.1.1",
     "node-fetch": "^2.6.0",
-    "nodemon": "^1.19.1",
+    "nodemon": "^1.19.2",
     "nyc": "^14.1.1",
+    "semantic-release": "^15.13.24",
     "snazzy": "^8.0.0",
     "standard": "^14.1.0",
     "tap-nyc": "^1.0.3",
