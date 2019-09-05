@@ -32,9 +32,9 @@
     "dev:cli": "npm run dev -- bin/cli.js",
     "dev:module": "npm run dev",
     "dev": "nodemon --config .nodemonrc",
-    "test:cli": "tape test/cli.test.js | tap-spec",
-    "test:module": "tape test/module.test.js | tap-spec",
-    "test": "tape test/**/*.test.js | tap-spec",
+    "test:cli": "tape test/cli/_.js | tap-spec",
+    "test:module": "tape test/module/_.js | tap-spec",
+    "test": "tape test/**/_.js | tap-spec",
     "check:style": "standard --verbose | snazzy",
     "check:coverage": "nyc tape test/**/*.test.js | tap-nyc",
     "check": "npm run check:style && npm run check:coverage"
