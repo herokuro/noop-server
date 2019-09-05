@@ -26,5 +26,51 @@ _.test('module:errors', async t => {
       'Should return an error, when message is an empty string.')
   }
 
+  const port = await _.port()
+  const path = require('../../lib/_internal/path')
+
+  let oldPath
+  let server, response, html
+
+  // temporarily change HTML path to a non-existent one
+  oldPath = path.html
+  path.html = 'non-existent.html'
+
+  server = new _.NoopServer(port)
+
+  console.log('-------------------------------------------------------------->')
+  server.start()
+
+  response = await _.fetch(`http://localhost:${port}`)
+  html = await response.text()
+
+  t.equal(html, "Error getting the HTML file: Error: ENOENT: no such file or directory, open 'non-existent.html'.",
+    'Should return an HTML file not found error, when the HTML file path is invalid.')
+
+  await server.stop()
+  // change back HTML path
+  path.html = oldPath
+  console.log('<--------------------------------------------------------------')
+
+  // temporarily change favicon path to a non-existent one
+  oldPath = path.favicon
+  path.favicon = 'non-existent.ico'
+
+  server = new _.NoopServer(port)
+
+  console.log('-------------------------------------------------------------->')
+  server.start()
+
+  response = await _.fetch(`http://localhost:${port}/favicon.ico`)
+  html = await response.text()
+
+  t.equal(html, "Error getting the file: Error: ENOENT: no such file or directory, open 'non-existent.ico'.",
+    'Should return a file not found error, when the favicon file path is invalid.')
+
+  await server.stop()
+  // change back favicon path
+  path.favicon = oldPath
+  console.log('<--------------------------------------------------------------')
+
   t.end()
 })
