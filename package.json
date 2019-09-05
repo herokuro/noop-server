@@ -2,8 +2,32 @@
   "name": "@herokuro/noop-server",
   "version": "0.0.0",
   "description": "A really basic Node.js server to use in development and testing, when using Heroku.",
+  "author": "Richard King <richrdkng@gmail.com> (www.richrdkng.com)",
+  "license": "ISC",
+  "homepage": "https://github.com/herokuro/noop-server#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/herokuro/noop-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/herokuro/noop-server/issues"
+  },
   "main": "lib/index.js",
-  "bin": "./bin/cli.js",
+  "bin": {
+    "noop-server": "./bin/cli.js"
+  },
+  "keywords": [],
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "directories": {
+    "bin": "./bin",
+    "doc": "./doc",
+    "lib": "./lib"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev:cli": "npm run dev -- bin/cli.js",
     "dev:module": "npm run dev",
@@ -15,17 +39,6 @@
     "check:coverage": "nyc tape test/**/*.test.js | tap-nyc",
     "check": "npm run check:style && npm run check:coverage"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/herokuro/noop-server.git"
-  },
-  "keywords": [],
-  "author": "Richard King <richrdkng@gmail.com> (www.richrdkng.com)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/herokuro/noop-server/issues"
-  },
-  "homepage": "https://github.com/herokuro/noop-server#readme",
   "devDependencies": {
     "execa": "^2.0.4",
     "get-port": "^5.0.0",

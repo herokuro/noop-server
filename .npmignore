@@ -1,19 +1,28 @@
+# editor settings
+.idea
+.vscode
+.editorconfig
+
 # GitHub templates
 .github
 
-# Coverage directories
+# doc files
+doc
+
+# coverage files
 coverage
+coverage.lcov
 .nyc_output
 
-# build-related files
+# development files
+test
+.nodemonrc
+
+# build/ci files
+scripts
 .gitattributes
 .czrc
 .nvmrc
 .nycrc
 .releaserc
 .travis.yml
-
-# editor settings
-.idea
-.vscode
-.editorconfig
