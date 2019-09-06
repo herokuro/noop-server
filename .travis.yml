@@ -2,10 +2,10 @@ language: node_js
 
 node_js:
   - node
-  # - lts/*
-  # - 10
-  # - 9
-  # - 8
+  - lts/*
+  - 10
+  - 9
+  - 8
 
 cache:
   npm: false
@@ -19,7 +19,7 @@ notifications:
   email: false
 
 stages:
-  # - test
+  - test
   - style and coverage
   - name: deploy
     if: branch = master
@@ -33,7 +33,11 @@ jobs:
 
         # run and check tests with coverage
         - npm run check:coverage
+
+        # second run workaround - https://github.com/istanbuljs/nyc/issues/993#issuecomment-468265881
         - npm run check:coverage
+
+        # enforce 100% coverage check
         - npx nyc check-coverage
 
       after_success:
