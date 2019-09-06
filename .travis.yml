@@ -32,7 +32,7 @@ jobs:
         - npm run check:style
 
         # run tests with coverage
-        - npx nyc tape test/**/*.test.js
+        - npm run check:coverage
 
       after_success:
         # submit coverage report
