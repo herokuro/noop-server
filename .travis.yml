@@ -20,21 +20,19 @@ notifications:
 
 stages:
   - test
-  - style_and_coverage
-  - deploy
+  - style and coverage
+  - name: deploy
+    if: branch = master
 
 jobs:
   include:
-    - stage: style_and_coverage
-      name: "Style"
+    - stage: style and coverage
       script:
         # check code style according to StandardJS
         - npm run check:style
 
-      name: "Coverage"
-      script:
         # run tests with coverage
-        - npm run check:coverage
+        - npx nyc tape test/**/*.test.js
 
       after_success:
         # submit coverage report
