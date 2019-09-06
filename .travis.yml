@@ -32,9 +32,8 @@ jobs:
         - npm run check:style
 
         # run and check tests with coverage
-        - npm run check:coverage
-
         # second run workaround - https://github.com/istanbuljs/nyc/issues/993#issuecomment-468265881
+        - npm run check:coverage > /dev/null 2>&1
         - npm run check:coverage
 
         # enforce 100% coverage check

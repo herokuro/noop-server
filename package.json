@@ -36,7 +36,7 @@
     "test:module": "tape test/module/_.js | tap-spec",
     "test": "tape test/**/_.js | tap-spec",
     "check:style": "standard --verbose | snazzy",
-    "check:coverage": "nyc --reporter \"text\" tape test/**/*.test.js | tap-nyc",
+    "check:coverage": "nyc --reporter=text --reporter=lcov tape test/**/*.test.js | tap-nyc",
     "check": "npm run check:style && npm run check:coverage"
   },
   "devDependencies": {
