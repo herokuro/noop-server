@@ -4,7 +4,16 @@
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
     "@semantic-release/github",
-    "@semantic-release/git",
+    ["@semantic-release/git", {
+      "assets": [
+        "bin/help.txt",
+        "CHANGELOG.md",
+        "package.json",
+        "package-lock.json",
+        "README.md",
+        "npm-shrinkwrap.json"
+      ]
+    }],
     "@semantic-release/npm"
   ]
 }
