@@ -1,5 +1,13 @@
 language: node_js
 
+os:
+  - linux
+
+sudo: false
+
+notifications:
+  email: false
+
 node_js:
   - node
   - lts/*
@@ -8,15 +16,9 @@ node_js:
   - 8
 
 cache:
+  # disable NPM cache to prevent "The command "eval npm ci" failed 3 times." issue
+  # more: https://github.com/travis-ci/travis-ci/issues/10113
   npm: false
-
-os:
-  - linux
-
-sudo: false
-
-notifications:
-  email: false
 
 stages:
   - test
