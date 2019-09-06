@@ -3,6 +3,8 @@
 const _ = require('../utils')
 
 _.test('cli:help flag', async t => {
+  const indices = [1, 10, 80, 252]
+
   const { stdout: helpShort } = await _.run(`node ${_.cli} -h`)
   const helpShortIndices = [
     helpShort.indexOf('Usage:'),
@@ -11,7 +13,7 @@ _.test('cli:help flag', async t => {
     helpShort.indexOf('Examples:')
   ]
 
-  t.deepEqual(helpShortIndices, [1, 10, 80, 209],
+  t.deepEqual(helpShortIndices, indices,
     '$ noop-server -h should return the help text')
 
   const { stdout: helpLong } = await _.run(`node ${_.cli} --help`)
@@ -22,7 +24,7 @@ _.test('cli:help flag', async t => {
     helpLong.indexOf('Examples:')
   ]
 
-  t.deepEqual(helpLongIndices, [1, 10, 80, 209],
+  t.deepEqual(helpLongIndices, indices,
     '$ noop-server --help should return the help text')
 
   t.end()
