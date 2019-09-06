@@ -19,20 +19,17 @@ notifications:
   email: false
 
 stages:
-  - style
   - test
-  - coverage
+  - "style & coverage"
   - deploy
 
 jobs:
   include:
-    - stage: style
+    - stage: "style & coverage"
       script:
         # check code style according to StandardJS
         - npm run check:style
 
-    - stage: coverage
-      script:
         # run tests with coverage
         - npm run check:coverage
 
