@@ -18,5 +18,5 @@ module.exports = {
   port: async () => getPort({ port: NoopServer.DEFAULT_PORT }),
   cli: path.resolve(__dirname, '../../bin/cli.js'),
   package: require('../../package.json'),
-  timeout: 2500 // in milliseconds
+  timeout: 1750 // in milliseconds
 }
