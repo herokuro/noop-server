@@ -1,16 +1,16 @@
 # noop-server for Heroku
 
-[![GitHub Release][badge-github]][url-github]
-[![Travis CI][badge-ci]][url-ci]
-[![Coverage Status][badge-coverage]][url-coverage]
-[![Greenkeeper][badge-greenkeeper]][url-greenkeeper]
-[![Inline Docs][badge-docs-check]][url-docs-check]
+[![release][badge-github]][url-github]
+[![ci][badge-ci]][url-ci]
+[![coverage][badge-coverage]][url-coverage]
+[![deps][badge-greenkeeper]][url-greenkeeper]
+[![docs][badge-docs-check]][url-docs-check]
 
-[![Code Style Guide][badge-style]][url-style]
-[![Commit Style Guide][badge-commit]][url-commit]
-[![Release Workflow][badge-release]][url-release]
-[![ISC License][badge-license-isc]][url-license-doc]
-[![PRs Welcome][badge-contrib]][url-contrib-doc]
+[![style][badge-style]][url-style]
+[![commit][badge-commit]][url-commit]
+[![workflow][badge-release]][url-release]
+[![license][badge-license-isc]][url-license-doc]
+[![contrib][badge-contrib]][url-contrib-doc]
 
 ---
 
