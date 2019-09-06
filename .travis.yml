@@ -20,16 +20,18 @@ notifications:
 
 stages:
   - test
-  - "Style & Coverage"
+  - style_and_coverage
   - deploy
 
 jobs:
   include:
-    - stage: "Style & Coverage"
+    - stage: style_and_coverage
+      name: "Style"
       script:
         # check code style according to StandardJS
         - npm run check:style
 
+      name: "Coverage"
         # run tests with coverage
         - npm run check:coverage
 
