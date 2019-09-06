@@ -33,6 +33,7 @@ jobs:
 
         # run and check tests with coverage
         - npm run check:coverage
+        - npm run check:coverage
         - npx nyc check-coverage
 
       after_success:
