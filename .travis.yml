@@ -40,10 +40,6 @@ jobs:
         - npx nyc report --reporter=text-lcov > coverage.lcov && npx codecov
 
     - stage: deploy
-      script:
-        # list the files that will be released
-        - npm pack --dry-run
-
       deploy:
         skip_cleanup: true
         provider: script
