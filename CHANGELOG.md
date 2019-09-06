@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/herokuro/noop-server/compare/v1.0.0...v1.0.1) (2019-09-06)
+
+
+### Bug Fixes
+
+* **docs:** fix URLs ([ecb4c46](https://github.com/herokuro/noop-server/commit/ecb4c46))
+
 # 1.0.0 (2019-09-05)
 
 
