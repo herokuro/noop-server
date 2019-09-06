@@ -2,8 +2,11 @@
 
 /* eslint no-fallthrough: "off" */
 
+const fs = require('fs')
+const text = require('../lib/_internal/text')
+
 // process flags and options ---------------------------------------------------
-const pkg = require('../package.json')
+const { version, homepage } = require('../package.json')
 const [,, ...args] = process.argv
 
 let port = null
@@ -17,39 +20,17 @@ for (let i = 0, len = args.length; i < len; i += 2) {
     // process version flag
     case '-v':
     case '--version':
-      console.log(pkg.version)
+      console.log(version)
       process.exit()
 
     // process help flag
     case '-h':
     case '--help':
-      console.log(`
-        Usage:
-          $ noop-server
-          $ noop-server port message
-          $ noop-server [options]
-
-        Options:
-          -p, --port      The port to use to run the server.
-          -m, --message   The greeting text message to use by the server.
-
-        Examples:
-          $ noop-server
-            Starting server on...
-
-          $ noop-server 8080
-
-          $ noop-server 8888 "My custom message."
-
-          $ noop-server -p 8080
-
-          $ noop-server -m "My custom message."
-
-          $ noop-server -p 8080 -m "My custom message."
-
-        Documentation can be found at ${pkg.homepage}
-
-        `.replace(/^ {8}/gm, '').slice(0, -2) // dedent and end-trim the text
+      console.log(
+        text.format(
+          fs.readFileSync(`${__dirname}/help.tpl`).toString().slice(0, -1),
+          { homepage }
+        )
       )
       process.exit()
 
