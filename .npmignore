@@ -19,6 +19,7 @@ test
 .nodemonrc
 
 # build/ci files
+script
 scripts
 .gitattributes
 .czrc
@@ -26,3 +27,6 @@ scripts
 .nycrc
 .releaserc
 .travis.yml
+
+# source files
+src
