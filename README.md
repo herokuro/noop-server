@@ -16,7 +16,7 @@ A really basic Node.js server to use in development and testing, when using Hero
 
 ## License
 
-[ISC][url-license-doc-isc] @ [Richard King](www.richrdkng.com)
+[ISC][url-license-doc-isc] @ [Richard King](https://www.richrdkng.com)
 
   <!--- References ============================================================================ -->
 
@@ -39,7 +39,7 @@ A really basic Node.js server to use in development and testing, when using Hero
   [url-greenkeeper]:     https://greenkeeper.io
   [url-docs]:            https://github.com/herokuro/noop-server/blob/master/docs/API.md
   [url-style]:           https://standardjs.com
-  [url-commit]:          http://commitizen.github.io/cz-cli
+  [url-commit]:          https://commitizen.github.io/cz-cli
   [url-release]:         https://semantic-release.gitbook.io/semantic-release
   [url-license]:         LICENSE.md
   [url-license-doc-isc]: https://github.com/herokuro/noop-server/blob/master/LICENSE.md
