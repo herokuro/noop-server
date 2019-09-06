@@ -32,103 +32,11 @@ npm install @herokuro/noop-server --save
 
 ## Usage - CLI
 
-- **Run:**
-  ```
-  $ noop-server
-  $ noop-server port message
-  $ noop-server [options]
-  ```
-
-- **Options:**
-  ```
-  -h, --help      Print usage information.
-  -p, --port      The port to use to run the server.
-  -m, --message   The greeting text message to use by the server.
-  ```
-
-- **Examples:**
-  ```
-  $ noop-server
-    Starting server on...
-    Another line
-    
-  $ noop-server 8080
-    
-  $ noop-server 8888 "My custom message."
-    
-  $ noop-server -p 8080
-    
-  $ noop-server -m "My custom message."
-    
-  $ noop-server -p 8080 -m "My custom message."
-    x
-    
-  ```
+{{ cli }}
 
 ## Usage - API
 
-<a name="NoopServer"></a>
-
-## NoopServer
-The noop-server class.
-
-**Kind**: global class  
-
-* [NoopServer](#NoopServer)
-    * [new NoopServer([port], [message])](#new_NoopServer_new)
-    * _instance_
-        * [.port](#NoopServer+port) ⇒ <code>number</code>
-        * [.message](#NoopServer+message) ⇒ <code>string</code>
-        * [.start()](#NoopServer+start)
-        * [.stop()](#NoopServer+stop) ⇒ <code>Promise</code>
-    * _static_
-        * [.DEFAULT_PORT](#NoopServer.DEFAULT_PORT) : <code>number</code>
-        * [.DEFAULT_MESSAGE](#NoopServer.DEFAULT_MESSAGE) : <code>string</code>
-
-<a name="new_NoopServer_new"></a>
-
-### new NoopServer([port], [message])
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [port] | <code>number</code> | A nice port. |
-| [message] | <code>string</code> | A nice message. |
-
-<a name="NoopServer+port"></a>
-
-### noopServer.port ⇒ <code>number</code>
-**Kind**: instance property of [<code>NoopServer</code>](#NoopServer)  
-<a name="NoopServer+message"></a>
-
-### noopServer.message ⇒ <code>string</code>
-**Kind**: instance property of [<code>NoopServer</code>](#NoopServer)  
-<a name="NoopServer+start"></a>
-
-### noopServer.start()
-Starts the noop-server.
-
-**Kind**: instance method of [<code>NoopServer</code>](#NoopServer)  
-<a name="NoopServer+stop"></a>
-
-### noopServer.stop() ⇒ <code>Promise</code>
-Stops the noop-server.
-
-**Kind**: instance method of [<code>NoopServer</code>](#NoopServer)  
-<a name="NoopServer.DEFAULT_PORT"></a>
-
-### NoopServer.DEFAULT\_PORT : <code>number</code>
-The default port number.
-
-**Kind**: static constant of [<code>NoopServer</code>](#NoopServer)  
-**Default**: <code>8080</code>  
-<a name="NoopServer.DEFAULT_MESSAGE"></a>
-
-### NoopServer.DEFAULT\_MESSAGE : <code>string</code>
-The default message.
-
-**Kind**: static constant of [<code>NoopServer</code>](#NoopServer)  
-**Default**: <code>&quot;Hello there from noop-server!&quot;</code>  
-
+{{ api }}
 
 ## Contribution
 

@@ -22,7 +22,6 @@
   },
   "directories": {
     "bin": "./bin",
-    "doc": "./doc",
     "lib": "./lib"
   },
   "publishConfig": {
@@ -35,6 +34,7 @@
     "test:cli": "tape test/cli/_.js | tap-spec",
     "test:module": "tape test/module/_.js | tap-spec",
     "test": "tape test/**/_.js | tap-spec",
+    "gen:docs": "gulp --gulpfile script/index.js -- gen",
     "check:style": "standard --verbose | snazzy",
     "check:coverage": "nyc --reporter=text --reporter=lcov tape test/**/*.test.js | tap-nyc",
     "check": "npm run check:style && npm run check:coverage"
@@ -48,6 +48,10 @@
     "@semantic-release/release-notes-generator": "^7.3.0",
     "execa": "^2.0.4",
     "get-port": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-file": "^0.4.0",
+    "js-yaml": "^3.13.1",
+    "jsdoc-to-markdown": "^5.0.1",
     "jsdom": "^15.1.1",
     "node-fetch": "^2.6.0",
     "nodemon": "^1.19.2",

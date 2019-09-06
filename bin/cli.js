@@ -28,7 +28,7 @@ for (let i = 0, len = args.length; i < len; i += 2) {
     case '--help':
       console.log(
         text.format(
-          fs.readFileSync(`${__dirname}/help.tpl`).toString().slice(0, -1),
+          fs.readFileSync(`${__dirname}/help.txt`, 'utf-8').slice(0, -1),
           { homepage }
         )
       )
