@@ -1,4 +1,4 @@
-# noop-server for Heroku
+# <img src="media/readme-header.png" title="noop-server" alt="noop-server logo">
 
 [![release][badge-github]][url-github]
 [![ci][badge-ci]][url-ci]
