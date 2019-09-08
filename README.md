@@ -10,11 +10,12 @@
 [![commit][badge-commit]][url-commit]
 [![workflow][badge-release]][url-release]
 [![license][badge-license-isc]][url-license-doc]
-[![contrib][badge-contrib]][url-contrib-doc]  
+[![contrib][badge-contrib]][url-contrib-doc]
 
 ---
 
 A really basic Node.js server to use in development and testing, when using Heroku.
+
 
 ---
 
