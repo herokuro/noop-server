@@ -52,7 +52,7 @@
     "gulp-file": "^0.4.0",
     "js-yaml": "^3.13.1",
     "jsdoc-to-markdown": "^5.0.1",
-    "jsdom": "^15.1.1",
+    "jsdom": "^16.0.1",
     "node-fetch": "^2.6.0",
     "nodemon": "^1.19.2",
     "nyc": "^14.1.1",
